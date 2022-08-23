@@ -1,0 +1,25 @@
+@import "common/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:link, a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  background-color: #f7f7f7;
+}
+
+button, input {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}

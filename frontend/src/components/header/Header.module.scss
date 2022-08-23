@@ -1,0 +1,51 @@
+@import "src/common/styles";
+
+.header_wrapper {
+  width: 100%;
+  background-color: #36263b;
+  padding: 30px 0 30px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.button_block {
+  background-color: #f8e302;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px;
+  color: #36263b;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(248, 227, 2, 0.85);
+  }
+}
+
+.container_profile {
+  display: flex;
+  align-items: center;
+
+  .my_profile_text {
+    color: white;
+    &:hover {
+      color: rgba(255, 255, 255, 0.42);
+    }
+  }
+
+  .menu_block {
+    position: relative;
+    margin-right: 20px;
+  }
+}
