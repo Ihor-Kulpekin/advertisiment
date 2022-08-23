@@ -7,10 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "axios": "^0.27.2"
+    "@koa/cors": "^3.4.1",
+    "axios": "^0.27.2",
+    "inversify": "^5.0.1",
+    "moment": "^2.24.0",
+    "mysql2": "^2.3.3",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@types/axios": "^0.14.0"
+    "@types/axios": "^0.14.0",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "^12.0.0",
+    "nodemon": "1.19.4",
+    "ts-node": "^10.2.1",
+    "tslint": "^5.16.0",
+    "typescript": "3.7"
   },
   "author": "",
   "license": "ISC"
