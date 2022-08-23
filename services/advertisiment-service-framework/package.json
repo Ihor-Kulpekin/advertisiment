@@ -1,0 +1,22 @@
+{
+  "name": "advertisiment-service-framework",
+  "version": "1.0.2",
+  "description": "framework",
+  "types": "./lib/index.d.ts",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "node index.ts",
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.2",
+    "redis": "3.1.2"
+  },
+  "devDependencies": {
+    "@types/redis": "^4.0.11",
+    "@types/amqplib": "^0.8.2"
+  }
+}
