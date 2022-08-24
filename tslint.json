@@ -1,0 +1,125 @@
+{
+  "rules": {
+    "ban-types": [true,
+      ["Object", "Use 'object' instead."],
+      ["String", "Use 'string' instead."],
+      ["Number", "Use 'number' instead."],
+      ["Boolean", "Use 'boolean' instead."],
+      ["Symbol", "Use 'symbol' instead."]
+    ],
+    "linebreak-style": [
+      true,
+      "LF"
+    ],
+    "class-name": true,
+    "comment-format": [
+      true,
+      "check-space"
+    ],
+    "no-duplicate-variable": true,
+    "no-eval": true,
+    "no-internal-module": true,
+    "no-trailing-whitespace": true,
+    "no-unsafe-finally": true,
+    "no-unused-variable": true,
+    "no-var-keyword": true,
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-whitespace"
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords"
+    ],
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "member-variable-declaration"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-module"
+    ],
+    "no-console": [
+      true,
+      "log",
+      "error",
+      "debug"
+    ],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "protected-static-field",
+          "private-static-field",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+          "public-static-method",
+          "protected-static-method",
+          "private-static-method",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ],
+    "indent": [
+      true,
+      "spaces",
+      4
+    ],
+    "promise-function-async": [
+      true,
+      "check-function-declaration",
+      "check-function-expression",
+      "check-method-declaration"
+    ],
+    "no-floating-promises": true,
+    "no-return-await": true,
+    "await-promise": true,
+    "no-duplicate-switch-case": true,
+    "no-duplicate-super": true,
+    "newline-before-return": true,
+    "no-misused-new": true,
+    "no-duplicate-imports": true,
+    "eofline": true,
+    "encoding": true,
+    "prefer-method-signature": true,
+    "import-spacing": true,
+    "no-use-before-declare": true
+  }
+}
