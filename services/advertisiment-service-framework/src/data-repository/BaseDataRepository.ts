@@ -31,8 +31,17 @@ export class BaseDataRepository implements IBaseDataRepository{
         return Promise.resolve(undefined);
     }
 
-    protected async createTable(sql: string): Promise<any> {
-        await this.connection.promise().query(sql)
+    public async create(body: any): Promise<any> {
+        await this.init();
+
+        const fields = Object.keys(body);
+        const values = [
+            Object.values(body)
+        ];
+
+        const sql = `INSERT INTO ${this.tableName} (${fields}) VALUES ?`;
+
+        return this.connection.promise().query(sql, [values]);
     }
 
     private async init(): Promise<void> {

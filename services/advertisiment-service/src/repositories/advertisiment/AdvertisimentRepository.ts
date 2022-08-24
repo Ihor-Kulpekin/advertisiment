@@ -25,4 +25,8 @@ export class AdvertisimentRepository extends BaseDataRepository implements IAdve
             totalCount: totalCount[0][0]['COUNT(*)']
         };
     }
+
+    public async createAdvertisiment(body: any): Promise<any> {
+        return this.create(body);
+    }
 }

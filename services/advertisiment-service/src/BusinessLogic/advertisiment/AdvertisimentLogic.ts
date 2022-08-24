@@ -13,4 +13,8 @@ export class AdvertisimentLogic implements IAdvertisimentLogic{
     public async getAdvertisiments(request: ServiceRequest): Promise<any> {
         return this.advertisimentRepository.getAdvertisiments(request);
     }
+
+    public async createAdvertisiment(request: ServiceRequest): Promise<any> {
+        return this.advertisimentRepository.createAdvertisiment(request);
+    }
 }

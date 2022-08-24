@@ -6,10 +6,19 @@ import {IRedisClientNew, Queues, ServiceRequest, ServiceRequestUtil} from "adver
 export class BmlsController {
     private static redisCache = container.get<IRedisClientNew>('RedisCache')
 
-    static async getAdvertisiment(ctx: Context): Promise<void> {
-        const result = await ServiceRequestUtil.send(Queues.bmls, new ServiceRequest({
+    static async getAdvertisiments(ctx: Context): Promise<void> {
+        const result = await ServiceRequestUtil.send(Queues.advertisiment, new ServiceRequest({
             method: 'getAdvertisiments',
             data: {limit: 10, skip: 0}
+        }))
+
+        CommonUtil.makeResponse(ctx, result);
+    }
+
+    static async createAdvertisiment(ctx: Context): Promise<void> {
+        const result = await ServiceRequestUtil.send(Queues.advertisiment, new ServiceRequest({
+            method: 'createAdvertisiment',
+            data: {...ctx.request.body}
         }))
 
         CommonUtil.makeResponse(ctx, result);

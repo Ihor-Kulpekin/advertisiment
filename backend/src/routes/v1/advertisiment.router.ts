@@ -5,7 +5,12 @@ export class AdvertisimentRouter extends BaseRouter{
     public init(): void {
         this.router.get(
             '/',
-            BmlsController.getAdvertisiment
+            BmlsController.getAdvertisiments
+        );
+
+        this.router.post(
+            '/',
+            BmlsController.createAdvertisiment
         );
     }
 }

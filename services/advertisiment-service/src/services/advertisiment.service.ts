@@ -11,7 +11,7 @@ interface ServiceRequest {
 
 @injectable()
 export class AdvertisimentService extends ServiceBase {
-    protected queueName: string = Queues.bmls;
+    protected queueName: string = Queues.advertisiment;
 
     constructor(
         @inject('AdvertisimentLogic') private advertisimentLogic: IAdvertisimentLogic

@@ -1,3 +1,3 @@
 export enum Queues {
-    bmls = 'BmlsService'
+    advertisiment = 'AdvertisimentService'
 }
