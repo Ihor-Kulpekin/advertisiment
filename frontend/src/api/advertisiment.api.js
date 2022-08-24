@@ -23,7 +23,7 @@ export const createAdvertisiment = async (payload) => {
     description: payload.description,
     price: payload.price,
     mainPhoto: payload.mainPhoto,
-    firstPhoto: payload.mainPhoto,
+    firstPhoto: payload.firstPhoto,
     createdAt: new Date()
   }
 

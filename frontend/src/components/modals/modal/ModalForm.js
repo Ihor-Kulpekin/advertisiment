@@ -53,14 +53,6 @@ const ModalForm = ({isShow, toggleModal, initialValues, onSubmit, error}) => isS
                                         setFieldValue('firstPhoto', event.target.value)
                                     }} type="text" label="First Photo" placeholder="First Photo (just input link)" value={values.firstPhoto} size="small"/>
 
-                                    <InputComponent onChange={(event) => {
-                                        setFieldValue('secondPhoto', event.target.value)
-                                    }} type="text" label="Second Photo" placeholder="Second Photo (just input link)" value={values.secondPhoto} size="small"/>
-
-                                    <InputComponent onChange={(event) => {
-                                        setFieldValue('thirdPhoto', event.target.value)
-                                    }} type="text" label="Third Photo" placeholder="Third Photo (just input link)" value={values.thirdPhoto} size="small"/>
-
                                 </div>
                                 <Button text="Create Account" type="submit" />
                             </form>
