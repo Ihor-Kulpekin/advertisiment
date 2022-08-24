@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 
 const ListAdvertisimentItem = ({item, setViews}) => {
   return (
-    <NavLink onClick={() => setViews(item._id, item)} to={`/details/${item._id}`} className={listItem.item}>
+    <NavLink onClick={() => setViews(item.id, item)} to={`/details/${item.id}`} className={listItem.item}>
       <div className={listItem.main_photo_block}>
-        <img alt={item.name} className={listItem.img} src={item.photosAdvertisiment.mainPhoto}/>
+        <img alt={item.name} className={listItem.img} src={item.mainPhoto}/>
       </div>
       <div className={listItem.info_block}>
         <div className={listItem.text}>{item.name}</div>

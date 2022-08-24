@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 
 const GalleryItemComponent = ({item, setViews}) => {
   return (
-    <NavLink onClick={() => setViews(item._id, item)} to={`/details/${item._id}`} className={galleryItemStyles.item}>
+    <NavLink onClick={() => setViews(item.id, item)} to={`/details/${item.id}`} className={galleryItemStyles.item}>
       <div className={galleryItemStyles.main_photo_block}>
-        <img alt={item.name} className={galleryItemStyles.img} src={item.photosAdvertisiment.mainPhoto}/>
+        <img alt={item.name} className={galleryItemStyles.img} src={item.mainPhoto}/>
       </div>
       <div className={galleryItemStyles.info_block}>
         <div className={galleryItemStyles.text}>{item.name}</div>
