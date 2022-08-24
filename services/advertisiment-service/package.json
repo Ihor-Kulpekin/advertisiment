@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "advertisiment-service-framework": "^1.0.24"
+    "advertisiment-service-framework": "1.0.33"
   }
 }

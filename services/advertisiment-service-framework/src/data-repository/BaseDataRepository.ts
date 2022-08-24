@@ -12,13 +12,21 @@ export class BaseDataRepository implements IBaseDataRepository{
     public async count(query: any): Promise<any> {
         await this.init();
 
-        return this.connection.promise().query(`SELECT COUNT(*) FROM ${this.tableName}`, [this.tableName]);
+        const result = await this.connection.promise().query(`SELECT COUNT(*) FROM ${this.tableName}`, [this.tableName]);
+
+        await this._close();
+
+        return result;
     }
 
     public async getAll(query: any): Promise<any> {
         await this.init();
 
-        const results = await this.connection.promise().query(`SELECT * FROM ${this.tableName} LIMIT ? OFFSET ?`, [query.limit, query.skip]);
+        const sort = query.sort.split(':');
+
+        const sql = `SELECT * FROM ${this.tableName} ORDER BY ${sort[0]} ${sort[1].toUpperCase()} LIMIT ?, ?;`
+
+        const results = await this.connection.promise().query(sql, [Number(query.skip), Number(query.limit)]);
 
         await this._close();
 
@@ -41,7 +49,11 @@ export class BaseDataRepository implements IBaseDataRepository{
 
         const sql = `INSERT INTO ${this.tableName} (${fields}) VALUES ?`;
 
-        return this.connection.promise().query(sql, [values]);
+        const result = await this.connection.promise().query(sql, [values]);
+
+        await this._close();
+
+        return result;
     }
 
     private async init(): Promise<void> {
@@ -54,7 +66,9 @@ export class BaseDataRepository implements IBaseDataRepository{
             host: 'localhost',
             user: 'user',
             password: 'password',
-            database: 'advertisiment'
+            database: 'advertisiment',
+            connectTimeout: 28800,
+            waitForConnections: true
         });
 
         await this.connection.promise().connect();
