@@ -2,7 +2,7 @@ import axios from "axios";
 import { apiUrl } from "../constants/constants";
 
 export const getAdvertisiment = async (id) => {
-  const response = await axios.get(`${apiUrl}/advertisement/${id}`);
+  const response = await axios.get(`${apiUrl}/api/v1/advertisiment/${id}`);
 
   return response.data;
 }
@@ -10,7 +10,7 @@ export const getAdvertisiment = async (id) => {
 export const getAdvertisiments = async (payload) => {
   const query = `filters=${JSON.stringify(payload.filters)}&sort=${payload.sort}&skip=${payload.skip}&rows=${payload.rows}&limit=${payload.limit}`;
 
-  const response = await axios.get(`${apiUrl}/advertisement?${query}`, {
+  const response = await axios.get(`${apiUrl}/api/v1/advertisiment?${query}`, {
     method: 'GET'
   });
 
@@ -22,25 +22,18 @@ export const createAdvertisiment = async (payload) => {
     name: payload.name,
     description: payload.description,
     price: payload.price,
-    photosAdvertisiment: {
-      mainPhoto: payload.mainPhoto,
-      photos: []
-    },
+    mainPhoto: payload.mainPhoto,
+    firstPhoto: payload.mainPhoto,
+    createdAt: new Date()
   }
 
-  Object.keys(['firstPhoto', 'secondPhoto', 'thirdPhoto']).forEach((key) => {
-    if (payload[key]) {
-      advertisiment.photosAdvertisiment.photos.push(payload[key]);
-    }
-  })
-
-  const response = await axios.post(`${apiUrl}/advertisement`, advertisiment);
+  const response = await axios.post(`${apiUrl}/api/v1/advertisiment`, advertisiment);
 
   return response.data
 }
 
 export const updateAdvertisiment = async (payload) => {
-  const response = await axios.put(`${apiUrl}/advertisement/${payload.id}`, payload.newValues);
+  const response = await axios.put(`${apiUrl}/api/v1/advertisiment/${payload.id}`, payload.newValues);
 
   return response.data;
 }

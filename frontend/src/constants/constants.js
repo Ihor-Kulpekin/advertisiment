@@ -27,4 +27,4 @@ export const ActionsTypes = {
   'SET_PAGE': 'SET_PAGE'
 }
 
-export const apiUrl = 'http://localhost:3009'
+export const apiUrl = 'http://localhost:3002'

@@ -1,11 +1,11 @@
 import {BaseRouter} from "../base.router";
-import {BmlsRouter} from "./bmls.router";
+import {AdvertisimentRouter} from "./advertisiment.router";
 
 export class ApiV1 extends BaseRouter {
     public init(): void {
         this.router.use(
-            '/bmls',
-            new BmlsRouter().routes
+            '/advertisiment',
+            new AdvertisimentRouter().routes
         )
     }
 }

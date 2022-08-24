@@ -1,13 +1,16 @@
 {
   "name": "advertisiment-service-framework",
-  "version": "1.0.2",
+  "version": "1.0.13",
   "description": "framework",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.js",
   "scripts": {
     "start": "node index.ts",
     "build": "npx tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish",
+    "unpublish": "npm unpublish --force advertisiment-service-framework@1.0.8",
+    "view-npm": "npm view advertisiment-service-framework time\n"
   },
   "author": "",
   "license": "ISC",

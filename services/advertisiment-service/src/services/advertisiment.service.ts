@@ -26,7 +26,6 @@ export class AdvertisimentService extends ServiceBase {
 
         if (!this.advertisimentLogic[request.method]) {
             const error = `method ${request.method} not exists on BmlLogic`;
-            console.log('request', request);
             throw new Error(error);
         }
 

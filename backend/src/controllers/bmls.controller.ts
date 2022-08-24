@@ -8,7 +8,8 @@ export class BmlsController {
 
     static async getAdvertisiment(ctx: Context): Promise<void> {
         const result = await ServiceRequestUtil.send(Queues.bmls, new ServiceRequest({
-            method: 'getAdvertisiment'
+            method: 'getAdvertisiments',
+            data: {limit: 10, skip: 0}
         }))
 
         CommonUtil.makeResponse(ctx, result);

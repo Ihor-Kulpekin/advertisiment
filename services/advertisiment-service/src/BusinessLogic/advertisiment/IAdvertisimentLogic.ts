@@ -1,3 +1,5 @@
+import {ServiceRequest} from "advertisiment-service-framework";
+
 export interface IAdvertisimentLogic {
-    getAdvertisiment(): Promise<any>
+    getAdvertisiments(request: ServiceRequest): Promise<any>
 }

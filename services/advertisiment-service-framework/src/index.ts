@@ -5,6 +5,10 @@ import {IService, ServiceRequest} from "./services/service-base/iservice";
 import container from "./common/container";
 import {IRedisClientNew} from "./services/redis/IRedisCache";
 import {RedisClient} from "./services/redis/RedisCache";
+import {IBaseDataRepository} from "./data-repository/IBaseDataRepository";
+import {BaseDataRepository} from "./data-repository/BaseDataRepository";
+import {IDBFactory, } from "./factory/IDBFactory";
+import {DBFactory} from "./factory/DBFactory";
 
 export {
     ServiceBase,
@@ -14,5 +18,9 @@ export {
     IService,
     Queues,
     IRedisClientNew,
-    RedisClient
+    RedisClient,
+    IBaseDataRepository,
+    BaseDataRepository,
+    IDBFactory,
+    DBFactory
 }
