@@ -9,6 +9,6 @@ export class AuthLogic implements IAuthLogic{
     }
 
     public async register(request: ServiceRequest): Promise<any> {
-        return 'register';
+        return request;
     }
 }

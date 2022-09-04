@@ -22,7 +22,7 @@ const RegisterPage = () => {
 
   return (
     <div className={`${registerPage.wrapper} ${registerPage.register}`}>
-      <AlertComponent show={show} keyReducer="user" text="User was successfuly registered"/>
+      {/*<AlertComponent show={show} keyReducer="user" text="User was successfuly registered"/>*/}
       <RegisterForm onSubmit={onSubmit} initialValues={{ firstName: "", lastName: "", email: "", password: "" }} />
     </div>
   );

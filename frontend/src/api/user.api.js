@@ -2,14 +2,14 @@ import axios from "axios";
 import { apiUrl } from "../constants/constants";
 
 export const register = async (payload) => {
-  const response = await axios.post(`${apiUrl}/users`,  payload);
+  const response = await axios.post(`${apiUrl}/api/v1/auth/register`,  payload);
 
   return response.data;
 }
 
 export const loginUser = async (payload) => {
   const response = await axios.post(`${apiUrl}/account/login`,  payload);
-  console.log('response', response);
+
   return response.data;
 }
 

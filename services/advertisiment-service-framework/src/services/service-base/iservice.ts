@@ -1,6 +1,8 @@
 export class ServiceRequest {
     method: string;
     data: any;
+    module?: any;
+    options?: any;
 
     constructor(options?: any) {
         if (options) {

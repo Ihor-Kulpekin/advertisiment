@@ -1,4 +1,5 @@
 export enum Queues {
     advertisiment = 'AdvertisimentService',
-    auth = 'AuthService'
+    auth = 'AuthService',
+    entities = 'EntitiesService',
 }

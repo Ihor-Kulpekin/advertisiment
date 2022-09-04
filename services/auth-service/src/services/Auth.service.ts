@@ -17,12 +17,12 @@ export class AuthService extends ServiceBase{
             return {error: 'method is required'}
         }
 
-        if (this.authLogic[request.method]) {
-            const error = `method ${request.method} not exists on BmlLogic`;
+        if (!this.authLogic[request.method]) {
+            const error = `method ${request.method} not exists on AuthLogic`;
 
             throw new Error(error);
         }
-
+        console.log('request', request);
         return this.authLogic[request.method](request.data);
     }
 }

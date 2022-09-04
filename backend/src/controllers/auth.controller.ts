@@ -5,8 +5,8 @@ import {CommonUtil} from "../util/common.util";
 export class AuthController {
     static async register(ctx: Context): Promise<void> {
         const result = await ServiceRequestUtil.send(Queues.auth, new ServiceRequest({
-            method: 'registerUser',
-            data: {...ctx.query}
+            method: 'register',
+            data: {...ctx.request.body}
         }))
 
         CommonUtil.makeResponse(ctx, result);
