@@ -7,7 +7,7 @@ export class BaseDataRepository implements IBaseDataRepository{
     private connection!: Connection;
     protected tableName: string = '';
 
-    constructor(private createTableCallback: () => Promise<any>) {}
+    constructor(private createTableCallback: () => Promise<void>) {}
 
     public async count(query: any): Promise<any> {
         await this.init();

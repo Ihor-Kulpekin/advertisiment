@@ -10,9 +10,8 @@ export class AdvertisimentRepository extends BaseDataRepository implements IAdve
     constructor(
         @inject('DBFactory') protected dbFactory: IAdvertisimentFactory
     ) {
-        // @ts-ignore
-        super(()=>{
-            this.dbFactory.Advertisiment().then();
+        super( () => {
+            return this.dbFactory.Advertisiment();
         });
     }
 

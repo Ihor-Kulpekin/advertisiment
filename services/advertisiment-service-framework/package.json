@@ -1,6 +1,6 @@
 {
   "name": "advertisiment-service-framework",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "framework",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.js",
