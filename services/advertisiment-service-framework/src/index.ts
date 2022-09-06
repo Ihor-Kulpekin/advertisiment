@@ -9,6 +9,8 @@ import {IBaseDataRepository} from "./data-repository/IBaseDataRepository";
 import {BaseDataRepository} from "./data-repository/BaseDataRepository";
 import {IDBFactory, } from "./factory/IDBFactory";
 import {DBFactory} from "./factory/DBFactory";
+import { EntitiesFacade } from "./facades/entities-facade/EntitiesFacade";
+import { IEntitiesFacade } from "./facades/entities-facade/IEntitiesFacade";
 
 export {
     ServiceBase,
@@ -22,5 +24,7 @@ export {
     IBaseDataRepository,
     BaseDataRepository,
     IDBFactory,
-    DBFactory
+    DBFactory,
+    EntitiesFacade,
+    IEntitiesFacade
 }

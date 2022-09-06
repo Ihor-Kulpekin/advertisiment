@@ -22,7 +22,7 @@ export class AuthService extends ServiceBase{
 
             throw new Error(error);
         }
-        console.log('request', request);
-        return this.authLogic[request.method](request.data);
+
+        return this.authLogic[request.method](request);
     }
 }

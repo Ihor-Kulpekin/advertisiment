@@ -7,7 +7,7 @@ export class EntitiesService extends ServiceBase{
     protected queueName: string = Queues.entities;
 
     constructor(
-        @inject('UserMethods') users: IUserMethods
+        @inject('UserMethods') private users: IUserMethods
     ) {
         super();
     }

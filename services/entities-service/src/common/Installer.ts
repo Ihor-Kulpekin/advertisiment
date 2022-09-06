@@ -1,11 +1,16 @@
-import {Container} from "inversify";
-import {IService} from "advertisiment-service-framework";
+import {container, IService} from "advertisiment-service-framework";
 import {EntitiesService} from "../services/EntitiesService";
 import {IUserMethods} from "../BusinessLogic/user/IUserMethods";
 import {UserMethods} from "../BusinessLogic/user/UserMethods";
-
-export const container = new Container();
+import {IEntitiesDataLayer} from "../data-layer/IEntitiesDataLayer";
+import {EntitiesDataLayer} from "../data-layer/EntitiesDataLayer";
 
 container.bind<IService>('EntitiesService').to(EntitiesService);
 
-container.bind<IUserMethods>('EntitiesService').to(UserMethods);
+container.bind<IUserMethods>('UserMethods').to(UserMethods);
+
+container.bind<IEntitiesDataLayer>('EntitiesDataLayer').to(EntitiesDataLayer);
+
+export {
+    container
+}
